@@ -48,14 +48,12 @@ int main() {
 			int p = 12 - bcd.size();
 			for (int i = 0; i < p; i++)
 				bcd = "0" + bcd;
-			//cout << bcd << endl;
 			string place;
 			for (int i = 0; i < 12; i = i + 4) {
 				place = "";
 				for (int j = i; j < (i + 4); j++) {
 					place += bcd[j];
 				}
-				//cout << place << endl;
 				for (int k = 0; k < 10; k++) {
 					if (m[k] == place) {
 						digit.push_back(k);
@@ -64,7 +62,6 @@ int main() {
 				}
 			}
 			int ans = digit[2] + 10 * digit[1] + 100 * digit[0];
-			//cout << ans;
 			bitset<8> b1(ans);
 			cout << "The binary representation is: " << b1 << endl;
 		}
